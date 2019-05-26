@@ -1,0 +1,13 @@
+<div class="search-container">
+    <h3>SEARCH</h3>
+    <input type="email" (keyup)="makeSearch($event)">
+    <div class="results" *ngIf="list">
+        <ul *ngFor="let item of list">
+            <li>
+                <div [routerLink]="['../detail', item.id]">
+                    {{item.displayValues.name}}
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>

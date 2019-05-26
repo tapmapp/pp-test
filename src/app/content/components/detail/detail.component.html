@@ -1,0 +1,28 @@
+<div class="detail-container" *ngIf="detailItem">
+    <h3>IMAGE DETAILS</h3>
+    <ul>
+        <li>{{detailItem.id}}</li>
+        <li>{{detailItem.contentSchemaId}}</li>
+        <li>{{detailItem.contentType}}</li>
+        <li><strong>Layer Schemas Ids:</strong>
+            <ul>
+                <li *ngFor="let layerSchemaId of detailItem.layerSchemaIds">
+                    {{layerSchemaId}}
+                </li>
+            </ul>
+        </li>
+        <li><strong>Outputs</strong>
+            <ul>
+                <li *ngFor="let output of detailItem.outputs">
+                    {{output.outputFormatId}}
+                </li>
+            </ul>
+        </li>
+        <li>
+            <strong>File Size:</strong>
+            <span *ngIf="!detailItem.content || !detailItem.content.fileSizeInBytes">Not Available</span>
+            <span *ngIf="detailItem.content && detailItem.content.fileSizeInBytes">{{detailItem.content.fileSizeInBytes}}</span>
+        </li>
+    </ul>
+    
+</div>

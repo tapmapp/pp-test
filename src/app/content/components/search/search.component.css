@@ -1,0 +1,24 @@
+
+.search-container { margin: 50px 50px; }
+.search-container p { width: 50%; line-height: 24px; font-size: 14px; }
+.search-container input { margin: 0px 0px 50px 0px; }
+
+ul { margin: 0 -10px 0 -10px}
+ul li { width: 20%; float: left; }
+ul li div { 
+    height: 200px;
+    background: #eaeaea;
+    margin: 10px;
+    overflow: hidden;
+    line-height: 200px;
+    text-align: center;
+    font-size: 10px;
+    color: #333;
+    cursor: pointer;
+    border:2px solid #eaeaea;
+}
+ul li div:hover { 
+    border:2px solid #1e3242;
+    background: linear-gradient(to right, #040709, #1e3242) !important;
+    color: white;
+}
